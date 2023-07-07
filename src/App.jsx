@@ -13,9 +13,9 @@ function App() {
     <>
       <NavBar />
 
-      {/* <Outlet />
+      <Outlet />
 
-      <Footer /> */}
+      {/* <Footer /> */}
     </>
   )
 }
