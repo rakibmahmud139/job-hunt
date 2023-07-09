@@ -1,7 +1,14 @@
 import React from 'react';
+import { useLoaderData } from 'react-router-dom';
+import Category from './Category';
 
 
 const Header = () => {
+
+    const jobCategory = useLoaderData();
+    console.log(jobCategory);
+
+
     return (
         <div>
             <div className='my-container flex items-center bg-gray-100'>
@@ -18,21 +25,20 @@ const Header = () => {
             {/* Job Category */}
 
             <div className='my-container'>
-                <h3 className='font-bold text-3xl text-gray-900 mb-5'>Job Category List</h3>
-                <p className='text-gray-500'>Explore thousands of job opportunities with all the information you need. Its your future</p>
+                <h3 className='text-center font-bold text-3xl text-gray-900 mb-5'>Job Category List</h3>
+                <p className='text-gray-500 text-center'>Explore thousands of job opportunities with all the information you need. Its your future</p>
 
-                <div>
-
+                <div className='flex justify-between mt-8'>
+                    {
+                        jobCategory.map(category => <Category
+                        key={category.id}
+                        category={category}
+                        ></Category>)
+                    }
                 </div>
             </div>
 
 
-            {/* Jobs Features */}
-
-            <div className='my-container'>
-                <h3 className='font-bold text-3xl text-gray-900 mb-5'>Featured Jobs</h3>
-                <p className='text-gray-500'>Explore thousands of job opportunities with all the information you need. Its your future</p>
-            </div>
         </div>
 
     );
