@@ -8,6 +8,8 @@ import Statistics from './components/Statistics.jsx'
 import AppliedJobs from './components/AppliedJobs.jsx'
 import Blogs from './components/Blogs.jsx'
 import Error from './components/Error.jsx'
+import JobDetails from './components/JobDetails.jsx'
+
 
 
 
@@ -20,7 +22,7 @@ const router = createBrowserRouter([
       {
         path: '/',
         element: <Header />,
-        loader:()=> fetch('jobcategory.json')
+        loader: () => fetch('jobcategory.json')
       },
       {
         path: 'statistics',
@@ -33,7 +35,12 @@ const router = createBrowserRouter([
       {
         path: 'blogs',
         element: <Blogs />
-      }
+      },
+      {
+        path: '/job-details/:subTitle',
+        element: <JobDetails />,
+        loader: ({params}) => fetch(`jobs.json${params.subTitle}`)
+      },
     ]
   }
 ])
