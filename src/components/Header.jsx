@@ -23,7 +23,7 @@ const Header = () => {
                     <p className='text-gray-500 mt-5 mb-3'>Explore thousands of job opportunities with all the information you need. Its your future. Come find it. Manage all your job application from start to finish.</p>
                     <button className='btn-outlined'>Get Started</button>
                 </div>
-                <img src="/public/hardy.png" alt="cover" />
+                <img src="https://programminghero1.github.io/developer-portfolio/images/hardy.png" alt="" />
             </div>
 
 
