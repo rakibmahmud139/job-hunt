@@ -20,7 +20,7 @@ const Job = ({ job }) => {
                 <CurrencyDollarIcon className="h-5 w-4" />  {salary}</p>
             </div>
 
-            <Link to={`../job-details/${subTitle}`}>
+            <Link to={`../job-details/${id}`}>
                 <button className='bg-cyan-500 text-white px-2 py-1 rounded mt-2 hover:bg-cyan-800 transition duration-500'>View Details</button>
             </Link>
         </div>
