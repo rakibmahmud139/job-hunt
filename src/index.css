@@ -29,3 +29,11 @@
 .default {
     @apply font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-cyan-600
 }
+
+.questions{
+    @apply font-bold text-gray-900 text-2xl mb-2
+}
+
+.ans{
+    @apply font-bold text-xl text-black
+}
